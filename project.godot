@@ -24,6 +24,17 @@ config/icon="res://icon.png"
 new_script="*res://Scripts/Global/new_script.gd"
 EnemyList="*res://Scripts/Global/EnemyList.gd"
 
+[layer_names]
+
+2d_render/layer_1="Enemies"
+2d_physics/layer_1="Enemies"
+2d_render/layer_2="Villagers"
+2d_physics/layer_2="Villagers"
+2d_render/layer_3="Buildings"
+2d_physics/layer_3="Buildings"
+2d_render/layer_4="Bullets"
+2d_physics/layer_4="Bullets"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

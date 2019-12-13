@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Mob.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Enemy.png" type="Texture" id=2]
@@ -6,12 +6,28 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends \"res://Scripts/Mob.gd\"
 
+var hitpoints = 3
+
 func _ready():
 	EnemyList.enemies.append(self)
 	pass
+
+
+func _on_Area2D_body_entered(body):
+	if body.get_meta(\"type\") == \"bullet\":
+		body.queue_free()
+		hitpoints -= 1
+		if hitpoints <= 0:
+			EnemyList.enemies.erase(self)
+			queue_free()
+	pass # Replace with function body.
 "
 
-[node name="Enemy" instance=ExtResource( 1 )]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24, 44 )
+
+[node name="Enemy" index="0" instance=ExtResource( 1 )]
+collision_mask = 12
 script = SubResource( 1 )
 
 [node name="Sprite" parent="." index="0"]
@@ -19,3 +35,9 @@ modulate = Color( 0.564706, 0.184314, 0.184314, 1 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 flip_v = false
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource( 2 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
