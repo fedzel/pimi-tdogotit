@@ -42,6 +42,15 @@ new_script="*res://Scripts/Global/new_script.gd"
 EnemyList="*res://Scripts/Global/EnemyList.gd"
 TaskList="*res://Scripts/Global/TaskList.gd"
 
+<<<<<<< HEAD
+[input]
+
+left_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+=======
 [layer_names]
 
 2d_render/layer_1="Enemies"
@@ -52,6 +61,7 @@ TaskList="*res://Scripts/Global/TaskList.gd"
 2d_physics/layer_3="Buildings"
 2d_render/layer_4="Bullets"
 2d_physics/layer_4="Bullets"
+>>>>>>> 285b04a60afa5d12a13488d16fe7113c1d25ff66
 
 [rendering]
 
