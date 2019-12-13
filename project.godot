@@ -8,9 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "BuildTask",
+"language": "GDScript",
+"path": "res://Scripts/Tasks/BuildTask.gd"
+}, {
+"base": "Node",
+"class": "Task",
+"language": "GDScript",
+"path": "res://Scripts/Tasks/Task.gd"
+}, {
+"base": "Node",
+"class": "WoodTask",
+"language": "GDScript",
+"path": "res://Scripts/Tasks/WoodTask.gd"
+} ]
 _global_script_class_icons={
-
+"BuildTask": "",
+"Task": "",
+"WoodTask": ""
 }
 
 [application]
@@ -23,6 +40,7 @@ config/icon="res://icon.png"
 
 new_script="*res://Scripts/Global/new_script.gd"
 EnemyList="*res://Scripts/Global/EnemyList.gd"
+TaskList="*res://Scripts/Global/TaskList.gd"
 
 [layer_names]
 
