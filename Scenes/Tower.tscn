@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Building.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends \"res://Scripts/Building.gd\"
@@ -10,15 +11,21 @@ var _maxCooldown = 1
 
 func _process(delta):
 	for enemy in EnemyList.enemies:
-		if enemy.position.distance_to(position) < 30:
+		if enemy.position.distance_to(position) < 100:
 			_cooldown += delta
 			if _cooldown > _maxCooldown:
 				var root = get_tree().get_root().get_node(\".\")
 				var bulletscene = load(\"res://Scenes/Bullet.tscn\")
-				root.add_child(bulletscene.instance())
+				var bullet = bulletscene.instance()
+				root.add_child(bullet)
+				bullet.position = self.position
+				bullet.target = enemy.position
 				_cooldown = 0
 			continue
 "
 
 [node name="Tower" instance=ExtResource( 1 )]
 script = SubResource( 1 )
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 2 )
