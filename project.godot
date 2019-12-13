@@ -19,6 +19,11 @@ config/name="pimiat-godotit"
 run/main_scene="res://RootNode2D.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+new_script="*res://Scripts/Global/new_script.gd"
+EnemyList="*res://Scripts/Global/EnemyList.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
