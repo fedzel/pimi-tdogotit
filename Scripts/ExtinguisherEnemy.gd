@@ -4,8 +4,8 @@ var _hitTimer: float
 var _maxHitTimer = 2
 
 func _ready():
-	self._speed = 100
-	self.target = BuildingList.bonfire.position
+	self._speed = 50
+	self.setTarget(BuildingList.bonfire.position)
 	_hitTimer = _maxHitTimer
 	pass
 	
