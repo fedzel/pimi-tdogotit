@@ -35,6 +35,11 @@ _global_script_classes=[ {
 "path": "res://Scripts/Tasks/Task.gd"
 }, {
 "base": "KinematicBody2D",
+"class": "Tower",
+"language": "GDScript",
+"path": "res://Scripts/Tower.gd"
+}, {
+"base": "KinematicBody2D",
 "class": "Villager",
 "language": "GDScript",
 "path": "res://Scripts/Villager.gd"
@@ -55,6 +60,7 @@ _global_script_class_icons={
 "Building": "",
 "Mob": "",
 "Task": "",
+"Tower": "",
 "Villager": "",
 "WoodTask": "",
 "Woods": ""

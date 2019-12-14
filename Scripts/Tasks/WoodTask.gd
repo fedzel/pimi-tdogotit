@@ -9,7 +9,7 @@ var _workTime = 0
 var _maxChopTime = 2
 var _maxUnloadTime = 1
 
-func _init(bonfireIn: Bonfire, woodsIn):
+func _init(bonfireIn, woodsIn):
 	self.bonfire = bonfireIn
 	self.woods = woodsIn
 

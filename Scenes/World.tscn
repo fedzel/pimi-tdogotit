@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Bonfire.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Tree.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Villager.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/ExtinguisherEnemy.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -31,5 +32,35 @@ position = Vector2( 467.207, 214.095 )
 [node name="Villager" parent="." instance=ExtResource( 7 )]
 position = Vector2( 467.207, 269.119 )
 
-[node name="Navigation2D" type="Navigation2D" parent="."]
+[node name="Villager3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 553.245, 239.695 )
 
+[node name="Villager4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 610, 239.695 )
+
+[node name="Villager5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 553.245, 290 )
+
+[node name="Villager6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 610, 310 )
+
+[node name="Villager7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 467.207, 330 )
+
+[node name="Villager8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 320 )
+
+[node name="Extinguisher" parent="." instance=ExtResource( 8 )]
+position = Vector2( 30, 370 )
+
+[node name="Extinguisher2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 20, 310 )
+
+[node name="Extinguisher3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 60, 330 )
+
+[node name="Extinguisher4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 30, 420 )
+
+[node name="Extinguisher5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 70, 390 )

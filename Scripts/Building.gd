@@ -4,5 +4,9 @@ class_name Building
 var hitpoints = 100
 
 func _process(delta):
-	pass
+	if isDestroyed():
+		visible = false
+		
+func isDestroyed():
+	return hitpoints <= 0
 
