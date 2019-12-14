@@ -1,7 +1,7 @@
 extends Control
 
 func _process(delta):
-	var m = get_global_mouse_position()
+	var m = get_local_mouse_position()
 	get_node("GraphicLoader").position = m
 
 func _input(event):
