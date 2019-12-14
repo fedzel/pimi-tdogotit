@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var target = Vector2(10,5)
-var _speed = 10
+var _speed = 100
 
 var _lifetime = 0
 const MAX_LIFETIME = 1.5
