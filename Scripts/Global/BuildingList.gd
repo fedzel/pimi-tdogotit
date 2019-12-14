@@ -2,5 +2,5 @@ extends Node
 
 var bonfire
 
-var buildings = []
+var towers = []
 var woods = []

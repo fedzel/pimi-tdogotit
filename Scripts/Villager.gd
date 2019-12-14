@@ -5,7 +5,7 @@ var _currentTask: Task
 
 func _ready():
 	self.target = self.position
-	self._speed = 80
+	self._speed = 90
 
 func _process(delta):
 	if _currentTask == null:
