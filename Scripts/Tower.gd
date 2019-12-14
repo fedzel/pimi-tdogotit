@@ -2,7 +2,7 @@ extends "res://Scripts/Building.gd"
 class_name Tower
 
 var _cooldown = 0
-var _maxCooldown = 1
+const _maxCooldown = 2
 
 var _cutoutDone = false
 
