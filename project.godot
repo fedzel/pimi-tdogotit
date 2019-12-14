@@ -44,6 +44,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Soldier.gd"
 }, {
+"base": "KinematicBody2D",
+"class": "Storage",
+"language": "GDScript",
+"path": "res://Scripts/Storage.gd"
+}, {
 "base": "Node",
 "class": "Task",
 "language": "GDScript",
@@ -77,6 +82,7 @@ _global_script_class_icons={
 "Mob": "",
 "SaboteurEnemy": "",
 "SoldierEnemy": "",
+"Storage": "",
 "Task": "",
 "Tower": "",
 "Villager": "",

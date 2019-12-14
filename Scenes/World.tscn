@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/ExtinguisherEnemy.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Mobspawner.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Storage.tscn" type="PackedScene" id=14]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -321.554, -291.955, 1328.64, -322.068, 1263.81, 802.44, -301.946, 787.073 )
@@ -145,3 +146,6 @@ script = ExtResource( 10 )
 
 [node name="Mobspawner" parent="." instance=ExtResource( 13 )]
 position = Vector2( 366.423, 457.104 )
+
+[node name="Storage" parent="." instance=ExtResource( 14 )]
+position = Vector2( 626.044, 272.412 )
