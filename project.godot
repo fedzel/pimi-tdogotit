@@ -90,6 +90,7 @@ new_script="*res://Scripts/Global/new_script.gd"
 EnemyList="*res://Scripts/Global/EnemyList.gd"
 TaskList="*res://Scripts/Global/TaskList.gd"
 BuildingList="*res://Scripts/Global/BuildingList.gd"
+MobSpawn="*res://Scripts/Global/MobSpawn.gd"
 
 [input]
 
