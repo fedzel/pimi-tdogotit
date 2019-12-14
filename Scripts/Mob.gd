@@ -5,6 +5,8 @@ var _speed = 10
 
 var path := PoolVector2Array() setget set_path
 
+var _prevTarget = null
+
 #func _physics_process(delta):
 #	var pos = target - position
 #	pos = pos.normalized()
@@ -13,6 +15,12 @@ var path := PoolVector2Array() setget set_path
 
 func ready() -> void:
 	set_process(false)
+	
+func _ready():
+	EnemyList.allMobs.append(self)
+	
+func _exit_tree():
+	EnemyList.allMobs.erase(self)
 
 func _process(delta : float) -> void:
 	var move_distance = _speed * delta
@@ -20,6 +28,11 @@ func _process(delta : float) -> void:
 
 func setTarget(target: Vector2):
 	path = get_parent().get_parent().getPath(position, target)
+	_prevTarget = target
+	
+func recalculatePath():
+	if _prevTarget != null:
+		setTarget(_prevTarget)
 
 
 func move_along_path(distance : float) -> void:

@@ -9,3 +9,8 @@ script = ExtResource( 2 )
 
 [node name="Sprite" parent="." index="1"]
 texture = ExtResource( 3 )
+
+[node name="CutoutPolygon" parent="." index="3"]
+position = Vector2( -1.78814e-07, 43.948 )
+scale = Vector2( 0.668003, 5.3948 )
+polygon = PoolVector2Array( 12.4245, -9.75227, -12.1494, -9.78916, -12.2983, -6.56192, 11.9777, -6.5988 )

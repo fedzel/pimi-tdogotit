@@ -4,10 +4,18 @@ class_name Tower
 var _cooldown = 0
 var _maxCooldown = 1
 
+var _cutoutDone = false
+
+onready var cutoutPolygon = $CutoutPolygon
+
 func _ready():
 	BuildingList.towers.append(self)
 
 func _process(delta):
+	if _cutoutDone == false:
+		cutout()
+		_cutoutDone = true
+	
 	for enemy in EnemyList.enemies:
 		if enemy.position.distance_to(position) < 100:
 			_cooldown += delta
@@ -20,3 +28,7 @@ func _process(delta):
 				bullet.target = enemy.position
 				_cooldown = 0
 			continue
+
+func cutout():
+	#cutoutPolygon.offset = position
+	get_parent().get_parent().cutout(cutoutPolygon, position)

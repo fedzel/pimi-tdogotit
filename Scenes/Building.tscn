@@ -41,3 +41,9 @@ lifetime = 3.0
 fixed_fps = 60
 process_material = SubResource( 4 )
 texture = ExtResource( 2 )
+
+[node name="CutoutPolygon" type="Polygon2D" parent="."]
+position = Vector2( -1.78814e-07, 4.17233e-07 )
+scale = Vector2( 0.889312, 0.852416 )
+color = Color( 1, 1, 1, 0 )
+polygon = PoolVector2Array( 10, -10, -10, -10, -10, 10, 10, 10 )

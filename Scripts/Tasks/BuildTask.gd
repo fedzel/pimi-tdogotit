@@ -26,6 +26,6 @@ func outcome(mob: Mob):
 	print("DONE ", _scenePath)
 	var building = scene.instance()
 	building.position = _constructionSite.position
-	var root = _constructionSite.get_tree().get_root().get_node("Node2D")
+	var root = _constructionSite.get_tree().get_root().get_node("Node2D/Navigation2D/Buildings")
 	root.add_child(building)
 	_constructionSite.queue_free()
