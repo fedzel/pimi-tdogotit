@@ -1,5 +1,7 @@
 extends Node2D
 export (PackedScene) var SammuttajaMob
+export (PackedScene) var SaboteurMob
+export (PackedScene) var SotilasMob
 
 var _mouseOnGUI = false
 var _buildingPath = null
