@@ -4,6 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 13.5686
 
 [node name="Mob" type="KinematicBody2D"]
 script = ExtResource( 1 )

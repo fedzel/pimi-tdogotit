@@ -11,6 +11,7 @@ func _input(event):
 
 
 func _on_ItemList_item_selected(index):
+<<<<<<< HEAD
 	var task = BuildTask.new()
 	var graphic
 	if get_node("ItemList").is_anything_selected():
@@ -23,3 +24,6 @@ func _on_ItemList_item_selected(index):
 
 func _on_ItemList_item_activated(index):
 	print(index, " AKTIVOITU")
+=======
+	print(index)
+>>>>>>> 77fd28214ff2260b31bfd0e4651d66d5ecdb3601
