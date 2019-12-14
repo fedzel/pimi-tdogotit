@@ -9,10 +9,20 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Bonfire",
+"language": "GDScript",
+"path": "res://Scripts/Bonfire.gd"
+}, {
 "base": "Node",
 "class": "BuildTask",
 "language": "GDScript",
 "path": "res://Scripts/Tasks/BuildTask.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Building",
+"language": "GDScript",
+"path": "res://Scripts/Building.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Mob",
@@ -28,12 +38,20 @@ _global_script_classes=[ {
 "class": "WoodTask",
 "language": "GDScript",
 "path": "res://Scripts/Tasks/WoodTask.gd"
+}, {
+"base": "Area2D",
+"class": "Woods",
+"language": "GDScript",
+"path": "res://Scripts/Tree.gd"
 } ]
 _global_script_class_icons={
+"Bonfire": "",
 "BuildTask": "",
+"Building": "",
 "Mob": "",
 "Task": "",
-"WoodTask": ""
+"WoodTask": "",
+"Woods": ""
 }
 
 [application]
