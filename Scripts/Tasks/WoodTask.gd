@@ -2,31 +2,35 @@ extends "res://Scripts/Tasks/Task.gd"
 class_name WoodTask
 
 var bonfire: Bonfire
-var woods: Woods
+var woods
 
 var _goingToTree = true
 var _workTime = 0
 var _maxChopTime = 2
 var _maxUnloadTime = 1
 
+func _init(bonfireIn: Bonfire, woodsIn):
+	self.bonfire = bonfireIn
+	self.woods = woodsIn
+
 func start(mob: Mob):
-	mob.target = self.movePosition
+	mob.target = self.woods.position
 
 func perform(mob: Mob, delta: float):
 	if _goingToTree:
-		if self.isAtLocation(mob):
+		if self.isAtLocation(mob, woods.position):
 			_workTime += delta
 			if _workTime > _maxChopTime:
 				_workTime = 0
 				_goingToTree = false
 				mob.target = bonfire.position
 	else:
-		if mob.target.distance_to(bonfire.position) < TASK_DISTANCE:
+		if self.isAtLocation(mob, self.bonfire.position):
 			_workTime += delta
 			if _workTime > _maxUnloadTime:
 				_workTime = 0
 				_goingToTree = true
-				mob.target = self.movePosition
+				mob.target = self.woods.position
 	
 func outcome(mob: Mob):
 	pass

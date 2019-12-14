@@ -26,3 +26,4 @@ texture = ExtResource( 2 )
 [node name="Sprite3" type="Sprite" parent="."]
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
+[connection signal="input_event" from="." to="." method="_on_Woods_input_event"]
