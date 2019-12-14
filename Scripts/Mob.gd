@@ -19,7 +19,7 @@ func _process(delta : float) -> void:
 	move_along_path(move_distance)
 
 func setTarget(target: Vector2):
-	path = get_parent().getPath(position, target)
+	path = get_parent().get_parent().getPath(position, target)
 
 
 func move_along_path(distance : float) -> void:
