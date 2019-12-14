@@ -14,7 +14,7 @@ func _init(bonfireIn, woodsIn):
 	self.woods = woodsIn
 
 func start(mob: Mob):
-	mob.target = self.woods.position
+	mob.setTarget(self.woods.position)
 
 func perform(mob: Mob, delta: float):
 	if _goingToTree:
@@ -23,14 +23,14 @@ func perform(mob: Mob, delta: float):
 			if _workTime > _maxChopTime:
 				_workTime = 0
 				_goingToTree = false
-				mob.target = bonfire.position
+				mob.setTarget(bonfire.position)
 	else:
 		if self.isAtLocation(mob, self.bonfire.position):
 			_workTime += delta
 			if _workTime > _maxUnloadTime:
 				_workTime = 0
 				_goingToTree = true
-				mob.target = self.woods.position
+				mob.setTarget(self.woods.position)
 	
 func outcome(mob: Mob):
 	pass

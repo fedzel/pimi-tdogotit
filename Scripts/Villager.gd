@@ -4,8 +4,7 @@ class_name Villager
 var _currentTask: Task
 
 func _ready():
-	self.target = self.position
-	self._speed = 90
+	self._speed = 45
 
 func _process(delta):
 	if _currentTask == null:
