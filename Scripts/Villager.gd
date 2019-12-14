@@ -16,7 +16,7 @@ func handleTask(delta):
 	_currentTask.perform(self, delta)
 	if _currentTask.finished:
 		_currentTask = null
-		self.target = self.position
+		self.setTarget(self.position)
 			
 func searchForTasks():
 	if TaskList.tasks.size() > 0:

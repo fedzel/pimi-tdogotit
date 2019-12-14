@@ -2,24 +2,30 @@ extends "res://Scripts/Tasks/Task.gd"
 class_name BuildTask
 
 var _scenePath: String
+var _constructionSite
 var _buildPos: Vector2
 
-func _init(buildPosIn: Vector2, buildId: String):
+func _init(constructionSiteIn, buildId: String):
 	_scenePath = buildId
-	_buildPos = buildPosIn
+	_constructionSite = constructionSiteIn
+	_buildPos = constructionSiteIn.position
 	
 
 func start(mob: Mob):
-	mob.target = self._buildPos
+	mob.setTarget(self._buildPos)
 
 func perform(mob: Mob, delta: float):
-	if self.isAtLocation(mob, _buildPos):
-		outcome(mob)
-		finished = true
+	if self.isAtLocation(mob, _constructionSite.position):
+		_constructionSite.constructionTime += delta
+		if _constructionSite.isCompleted():			
+			outcome(mob)
+			finished = true
 
 func outcome(mob: Mob):
 	var scene = load(_scenePath)
+	print("DONE ", _scenePath)
 	var building = scene.instance()
-	var root = get_tree().get_root().get_node(".")
+	building.position = _constructionSite.position
+	var root = _constructionSite.get_tree().get_root().get_node("Node2D")
 	root.add_child(building)
-	pass
+	_constructionSite.queue_free()
