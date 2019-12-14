@@ -1,8 +1,16 @@
 extends Area2D
 class_name Woods
 
+var _cutoutDone = false
+onready var _cutoutPolygon = $Polygon2D
+
 func _ready():
 	pass
+
+func _process(delta):
+	if _cutoutDone == false:
+		_cutoutDone = true
+		get_parent().get_parent().cutout(_cutoutPolygon, position)
 
 
 func _on_Woods_input_event(viewport, event, shape_idx):
