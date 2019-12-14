@@ -1,7 +1,8 @@
 extends "res://Scripts/Tasks/Task.gd"
 class_name WoodTask
 
-var bonfirePosition: Vector2
+var bonfire: Bonfire
+var woods: Woods
 
 var _goingToTree = true
 var _workTime = 0
@@ -18,9 +19,9 @@ func perform(mob: Mob, delta: float):
 			if _workTime > _maxChopTime:
 				_workTime = 0
 				_goingToTree = false
-				mob.target = bonfirePosition
+				mob.target = bonfire.position
 	else:
-		if mob.target.distance_to(bonfirePosition) < TASK_DISTANCE:
+		if mob.target.distance_to(bonfire.position) < TASK_DISTANCE:
 			_workTime += delta
 			if _workTime > _maxUnloadTime:
 				_workTime = 0
