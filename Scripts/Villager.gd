@@ -5,6 +5,7 @@ var _currentTask: Task
 
 func _ready():
 	self._speed = 45
+	TaskList.all_villagers.append(self)
 
 func _process(delta):
 	if _currentTask == null:

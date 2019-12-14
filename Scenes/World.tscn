@@ -1,17 +1,18 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/ExtinguisherEnemy.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Bonfire.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Tower.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Tree.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scripts/NavigationController.gd" type="Script" id=6]
-[ext_resource path="res://Scenes/Villager.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/SaboteurEnemy.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=9]
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Mobspawner.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/SaboteurEnemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Bonfire.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Tower.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Tree.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/NavigationController.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Villager.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Soldier.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Mobspawner.tscn" type="PackedScene" id=13]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -321.554, -291.955, 1328.64, -322.068, 1263.81, 802.44, -301.946, 787.073 )
@@ -23,46 +24,47 @@ outlines = [ PoolVector2Array( -321.554, -291.955, 1328.64, -322.068, 1263.81, 8
 ]]
 script = ExtResource( 1 )
 SammuttajaMob = ExtResource( 2 )
+SaboteurMob = ExtResource( 3 )
 
-[node name="Bonfire" parent="." instance=ExtResource( 3 )]
+[node name="Bonfire" parent="." instance=ExtResource( 4 )]
 position = Vector2( 471.98, 272.412 )
 collision_layer = 1
 collision_mask = 1
 
-[node name="Tower" parent="." instance=ExtResource( 4 )]
+[node name="Tower" parent="." instance=ExtResource( 5 )]
 position = Vector2( 281.078, 182.497 )
 
-[node name="Woods" parent="." instance=ExtResource( 5 )]
+[node name="Woods" parent="." instance=ExtResource( 6 )]
 position = Vector2( 553.245, 83.0368 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 
 [node name="Villagers" type="Node2D" parent="Navigation2D"]
 editor/display_folded = true
 
-[node name="Villager2" parent="Navigation2D/Villagers" instance=ExtResource( 7 )]
+[node name="Villager2" parent="Navigation2D/Villagers" instance=ExtResource( 8 )]
 position = Vector2( 574.569, 257.685 )
 
-[node name="Villager" parent="Navigation2D/Villagers" instance=ExtResource( 7 )]
+[node name="Villager" parent="Navigation2D/Villagers" instance=ExtResource( 8 )]
 position = Vector2( 574.569, 312.709 )
 
-[node name="Villager3" parent="Navigation2D/Villagers" instance=ExtResource( 7 )]
+[node name="Villager3" parent="Navigation2D/Villagers" instance=ExtResource( 8 )]
 position = Vector2( 660.607, 283.285 )
 
-[node name="Villager4" parent="Navigation2D/Villagers" instance=ExtResource( 7 )]
+[node name="Villager4" parent="Navigation2D/Villagers" instance=ExtResource( 8 )]
 position = Vector2( 717.362, 283.285 )
 
-[node name="Villager5" parent="Navigation2D/Villagers" instance=ExtResource( 7 )]
+[node name="Villager5" parent="Navigation2D/Villagers" instance=ExtResource( 8 )]
 position = Vector2( 660.607, 333.59 )
 
-[node name="Villager6" parent="Navigation2D/Villagers" instance=ExtResource( 7 )]
+[node name="Villager6" parent="Navigation2D/Villagers" instance=ExtResource( 8 )]
 position = Vector2( 717.362, 353.59 )
 
-[node name="Villager7" parent="Navigation2D/Villagers" instance=ExtResource( 7 )]
+[node name="Villager7" parent="Navigation2D/Villagers" instance=ExtResource( 8 )]
 position = Vector2( 574.569, 373.59 )
 
-[node name="Villager8" parent="Navigation2D/Villagers" instance=ExtResource( 7 )]
+[node name="Villager8" parent="Navigation2D/Villagers" instance=ExtResource( 8 )]
 position = Vector2( 467.362, 363.59 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
@@ -88,17 +90,20 @@ position = Vector2( 51.2991, 422.341 )
 [node name="Extinguisher" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
 position = Vector2( 73.56, 358.106 )
 
-[node name="Saboteur" parent="Navigation2D/Enemies" instance=ExtResource( 8 )]
+[node name="Saboteur" parent="Navigation2D/Enemies" instance=ExtResource( 3 )]
 position = Vector2( 54.0627, 266.338 )
+
+[node name="Soldier" parent="Navigation2D/Enemies" instance=ExtResource( 9 )]
+position = Vector2( 555.699, 516.739 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 current = true
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 
-[node name="GUI" parent="Camera2D" instance=ExtResource( 10 )]
+[node name="GUI" parent="Camera2D" instance=ExtResource( 11 )]
 
-[node name="Control" parent="Camera2D" instance=ExtResource( 11 )]
+[node name="Control" parent="Camera2D" instance=ExtResource( 12 )]
 
-[node name="Mobspawner" parent="." instance=ExtResource( 12 )]
+[node name="Mobspawner" parent="." instance=ExtResource( 13 )]
 position = Vector2( 366.423, 457.104 )
