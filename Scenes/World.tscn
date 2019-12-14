@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Tower.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Bonfire.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Tree.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -15,3 +17,9 @@ position = Vector2( 227.127, 71.1892 )
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 276.847, 194.358 )
+
+[node name="Bonfire" parent="." instance=ExtResource( 5 )]
+position = Vector2( 422.187, 232.103 )
+
+[node name="Woods" parent="." instance=ExtResource( 6 )]
+position = Vector2( 553.245, 83.0368 )

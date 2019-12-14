@@ -8,6 +8,7 @@ script/source = "extends \"res://Scripts/Mob.gd\"
 
 func _ready():
 	set_meta(\"type\", \"bullet\")
+	self._speed = 80
 "
 
 [node name="Mob" instance=ExtResource( 1 )]
