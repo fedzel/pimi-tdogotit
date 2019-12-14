@@ -14,10 +14,11 @@ func _process(delta):
 		handleTask(delta)
 
 func handleTask(delta):
-	_currentTask.perform(self, delta)
 	if _currentTask.finished:
 		_currentTask = null
 		self.setTarget(self.position)
+	else:
+		_currentTask.perform(self, delta)
 			
 func searchForTasks():
 	if TaskList.tasks.size() > 0:

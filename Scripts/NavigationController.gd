@@ -19,6 +19,9 @@ func adjustPolygonPosition(inTransform, inPolygon, offset):
 		outPolygon.append(finalVertex)
 
 	return outPolygon
+	
+func reinsert(poly, offset):
+	pass
 
 func cutout(poly, offset):
 	NavPolyInstance.navpoly.add_outline(adjustPolygonPosition(poly.transform, poly.polygon, offset))

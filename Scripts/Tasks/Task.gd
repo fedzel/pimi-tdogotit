@@ -16,5 +16,9 @@ func perform(mob: Mob, delta: float):
 func isAtLocation(mob: Mob, pos: Vector2):
 	return mob.position.distance_to(pos) < TASK_DISTANCE
 
+func cancel():
+	finished = true
+	pass;
+
 func outcome(mob: Mob):
 	pass
