@@ -25,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://Scripts/Building.gd"
 }, {
 "base": "KinematicBody2D",
+"class": "ConstructionSite",
+"language": "GDScript",
+"path": "res://Scripts/ConstructionSite.gd"
+}, {
+"base": "KinematicBody2D",
 "class": "Mob",
 "language": "GDScript",
 "path": "res://Scripts/Mob.gd"
@@ -68,6 +73,7 @@ _global_script_class_icons={
 "Bonfire": "",
 "BuildTask": "",
 "Building": "",
+"ConstructionSite": "",
 "Mob": "",
 "SaboteurEnemy": "",
 "SoldierEnemy": "",

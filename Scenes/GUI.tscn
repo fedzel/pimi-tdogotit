@@ -19,3 +19,5 @@ same_column_width = true
 [node name="GraphicLoader" type="Sprite" parent="."]
 position = Vector2( 855.053, 1.18428 )
 [connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]
+[connection signal="mouse_entered" from="ItemList" to="." method="_on_ItemList_mouse_entered"]
+[connection signal="mouse_exited" from="ItemList" to="." method="_on_ItemList_mouse_exited"]
