@@ -1,7 +1,19 @@
 extends Node
 class_name Task
 
-var movePosition: Vector2
+const TASK_DISTANCE = 5
 
-func outcome():
+var movePosition: Vector2
+var finished = false
+
+func start(mob: Mob):
+	pass
+
+func perform(mob: Mob, delta: float):
+	pass
+
+func isAtLocation(mob: Mob):
+	return mob.position.distance_to(movePosition) < TASK_DISTANCE
+
+func outcome(mob: Mob):
 	pass

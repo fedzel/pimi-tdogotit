@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Mob
 
 var target = Vector2(10,5)
 
