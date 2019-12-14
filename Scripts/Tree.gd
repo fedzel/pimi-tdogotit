@@ -32,7 +32,7 @@ func _on_Woods_input_event(viewport, event, shape_idx):
 			TaskList.tasks.append(task)
 			tasks.append(task)
 			print("Task Created")
-		elif mouseEvent.is_pressed() && mouseEvent.button_index == BUTTON_RIGHT:
+		elif mouseEvent.is_pressed() && mouseEvent.button_index == BUTTON_RIGHT && tasks.size() > 0:
 			var task = tasks[tasks.size()-1]
 			task.cancel()
 			tasks.erase(task)
