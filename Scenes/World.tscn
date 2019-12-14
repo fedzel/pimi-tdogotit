@@ -96,6 +96,39 @@ position = Vector2( 555.699, 516.739 )
 [node name="Woods" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
 position = Vector2( 553.245, 83.0368 )
 
+[node name="Woods2" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 607.453, 115.16 )
+
+[node name="Woods3" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 610.465, 64.9674 )
+
+[node name="Woods4" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 777.105, 442.417 )
+
+[node name="Woods5" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 727.916, 477.552 )
+
+[node name="Woods6" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 784.132, 488.595 )
+
+[node name="Woods7" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 743.978, 523.73 )
+
+[node name="Woods8" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 819.267, 567.899 )
+
+[node name="Woods9" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 47.3015, 564.888 )
+
+[node name="Woods10" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 112.552, 564.888 )
+
+[node name="Woods11" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 80.4287, 529.753 )
+
+[node name="Woods12" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+position = Vector2( 36.259, 516.703 )
+
 [node name="Buildings" type="Node2D" parent="Navigation2D"]
 
 [node name="Tower" parent="Navigation2D/Buildings" instance=ExtResource( 9 )]

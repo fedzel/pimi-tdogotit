@@ -14,7 +14,6 @@ func _input(event):
 	if event.is_action_pressed("left_click") && _mouseOnGUI == false && _buildingPath != null:
 		var parent = get_node("Navigation2D/Buildings")
 		var mousePos = get_global_mouse_position()
-		print("build ", mousePos)
 		var consite = load("res://Scenes/ConstructionSite.tscn").instance()
 		parent.add_child(consite)
 		consite.position = mousePos
@@ -24,11 +23,9 @@ func _input(event):
 
 
 func MouseOnGUI():
-	print("ON")
 	_mouseOnGUI = true
 
 func MouseOffGUI():
-	print("OFF")
 	_mouseOnGUI = false
 
 func buildingSelected(path: String):

@@ -21,7 +21,6 @@ func adjustPolygonPosition(inTransform, inPolygon, offset):
 	return outPolygon
 
 func cutout(poly, offset):
-	print("cutout")
 	NavPolyInstance.navpoly.add_outline(adjustPolygonPosition(poly.transform, poly.polygon, offset))
 	NavPolyInstance.navpoly.make_polygons_from_outlines()
 	var navPolyInstance = get_node("NavigationPolygonInstance")

@@ -4,20 +4,21 @@ class_name SaboteurEnemy
 var _hitTimer: float
 var _maxHitTimer = 2
 
-var _target: Vector2
+var _targetBuilding
 
 func _ready():
 	self._speed = 50
 	if (BuildingList.towers.size() > 0):
-		var target = BuildingList.towers[randi()%BuildingList.towers.size()].position
-		self.setTarget(target)
-		_target = target
+		_targetBuilding = BuildingList.towers[randi()%BuildingList.towers.size()]
+		self.setTarget(_targetBuilding.position)
 	_hitTimer = _maxHitTimer
 	pass
 	
 func _process(delta):
-	if self.position.distance_to(_target) < Task.TASK_DISTANCE:
+	if _targetBuilding != null && self.position.distance_to(_targetBuilding.position) < Task.TASK_DISTANCE*10:
 		_hitTimer += delta
 		if _hitTimer > _maxHitTimer:
+			_targetBuilding.hitpoints -= 5;
+			print("HIT")
 			_hitTimer = 0
 			
