@@ -1,7 +1,7 @@
 extends KinematicBody2D
 class_name Mob
 
-var target = Vector2(10,5)
+var target = Vector2(0,500)
 var _speed = 10
 
 func _physics_process(delta):

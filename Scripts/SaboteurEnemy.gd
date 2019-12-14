@@ -7,6 +7,7 @@ func _ready():
 	self._speed = 100
 	if (BuildingList.towers.size() > 0):
 		self.target = BuildingList.towers[randi()%BuildingList.towers.size()].position
+		print(self.target)
 	_hitTimer = _maxHitTimer
 	pass
 	
