@@ -30,3 +30,6 @@ position = Vector2( 467.207, 214.095 )
 
 [node name="Villager" parent="." instance=ExtResource( 7 )]
 position = Vector2( 467.207, 269.119 )
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
