@@ -7,7 +7,7 @@ onready var NavPolyInstance = get_node("Navigation2D/NavigationPolygonInstance")
 onready var Cutout = get_node("Navigation2D/Cutout")
 
 
-func _process(delta):
+func _ready():
 	modifyNavPoly()
 	var new_path = nav.get_simple_path(location.position, target_loc.position)
 	print(new_path, " location")

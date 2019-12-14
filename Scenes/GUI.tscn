@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Arrow.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Tree.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Enemy.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
 
 [node name="GUI" type="Control"]
 anchor_right = 1.0
@@ -16,8 +19,12 @@ anchor_bottom = 0.5
 margin_left = -171.0
 margin_top = -299.0
 margin_bottom = 302.0
-items = [ "Torni", ExtResource( 2 ), false, "Muuri", ExtResource( 2 ), false, "Seppä", ExtResource( 2 ), false, "Linna", ExtResource( 2 ), false ]
-auto_height = true
+items = [ "Torni", ExtResource( 2 ), false, "Muuri", ExtResource( 3 ), false, "Seppä", ExtResource( 4 ), false, "Linna", ExtResource( 5 ), false, "Item 4", ExtResource( 5 ), false, "Item 5", null, false ]
 max_columns = 2
 same_column_width = true
+fixed_icon_size = Vector2( 64, 64 )
+
+[node name="GraphicLoader" type="Sprite" parent="."]
+visible = false
+[connection signal="item_activated" from="ItemList" to="." method="_on_ItemList_item_activated"]
 [connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]
