@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/TestWorld.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/TestPathfindingMob.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+[sub_resource type="NavigationPolygon" id=3]
+vertices = PoolVector2Array( 1076.28, 506.348, -66.4809, 504.59, -62.9647, -100.193, 1021.78, -98.4346 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 1021.78, -98.4346, -62.9647, -100.193, -66.4809, 504.59, 1076.28, 506.348 ) ]
+
+[node name="TestWorldPathfinding" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="Monster" type="KinematicBody2D" parent="Navigation2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Navigation2D/Monster"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Navigation2D/Monster"]
+shape = SubResource( 1 )
+
+[node name="Target" type="KinematicBody2D" parent="Navigation2D"]
+position = Vector2( 400.059, 150.459 )
+
+[node name="Sprite" type="Sprite" parent="Navigation2D/Target"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Navigation2D/Target"]
+shape = SubResource( 2 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 3 )
+
+[node name="Cutout" type="Polygon2D" parent="Navigation2D"]
+position = Vector2( -698.601, -703.775 )
+scale = Vector2( 0.861713, 6.64685 )
+polygon = PoolVector2Array( 1139.57, 101.987, 1194.07, 101.987, 1194.07, 152.972, 1139.57, 152.972 )
