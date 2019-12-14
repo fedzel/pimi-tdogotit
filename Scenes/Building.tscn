@@ -1,21 +1,28 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Building.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 0.0509804, 0.0509804, 0.0509804, 0.87451, 0.0980392, 0.0980392, 0.0980392, 0.219608 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
 [sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 1
+emission_sphere_radius = 5.41
 flag_disable_z = true
+spread = 161.38
 gravity = Vector3( 0, -30, 0 )
 initial_velocity = 11.49
 angular_velocity = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 0.2
-color = Color( 0, 0, 0, 0.266667 )
-hue_variation = 1.0
-hue_variation_random = 0.79
+color_ramp = SubResource( 4 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 collision_layer = 4
@@ -29,8 +36,8 @@ shape = SubResource( 1 )
 scale = Vector2( 0.1, 0.1 )
 
 [node name="SmokeParticle" type="Particles2D" parent="."]
-amount = 25
-lifetime = 5.0
+amount = 20
+lifetime = 3.0
 fixed_fps = 60
 process_material = SubResource( 2 )
 texture = ExtResource( 2 )

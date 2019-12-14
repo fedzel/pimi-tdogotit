@@ -20,4 +20,6 @@ items = [ "Torni", ExtResource( 2 ), false, "Muuri", ExtResource( 2 ), false, "S
 auto_height = true
 max_columns = 2
 same_column_width = true
+
+[node name="GraphicLoader" type="Sprite" parent="."]
 [connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]
