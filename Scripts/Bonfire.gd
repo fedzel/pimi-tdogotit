@@ -15,10 +15,9 @@ func _ready():
 	pass
 
 func _process(delta):
-	print(hitpoints)
-	var scaleMultiplier = 500.0 / hitpoints + 0.2
+	var scaleMultiplier = (hitpoints / 500.0) + 0.3
 	var scale = 0.3 * scaleMultiplier
-	#sprite.transform = sprite.transform.scaled(Vector2(scale, scale))
+	sprite.scale = Vector2(scale, scale)
 	
 
 func _on_Bonfire_input_event(viewport, event, shape_idx):

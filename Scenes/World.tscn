@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/ExtinguisherEnemy.tscn" type="PackedScene" id=2]
@@ -12,13 +12,20 @@
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Assets/Fontit/new_theme.tres" type="Theme" id=12]
-[ext_resource path="res://Scenes/Mobspawner.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Storage.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Fontit/Berry Rotunda.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Scenes/Mobspawner.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Storage.tscn" type="PackedScene" id=15]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -321.554, -291.955, 1328.64, -322.068, 1263.81, 802.44, -301.946, 787.073 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -321.554, -291.955, 1328.64, -322.068, 1263.81, 802.44, -301.946, 787.073 ) ]
+
+[sub_resource type="Theme" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 10
+font_data = ExtResource( 13 )
 
 [node name="Node2D" type="Node2D" groups=[
 "WorldBase",
@@ -140,10 +147,18 @@ margin_bottom = 250.506
 theme = ExtResource( 12 )
 text = "VOITIT"
 
-[node name="Mobspawner" parent="." instance=ExtResource( 13 )]
+[node name="BonfireLabel" type="Label" parent="Camera2D"]
+margin_left = 839.235
+margin_top = 548.896
+margin_right = 879.235
+margin_bottom = 562.896
+theme = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+
+[node name="Mobspawner" parent="." instance=ExtResource( 14 )]
 position = Vector2( 366.423, 457.104 )
 
-[node name="Storage" parent="." instance=ExtResource( 14 )]
+[node name="Storage" parent="." instance=ExtResource( 15 )]
 position = Vector2( 626.044, 272.412 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]

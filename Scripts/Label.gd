@@ -4,4 +4,4 @@ func _ready():
 	pass
 	
 func _process(delta):
-	text = "Wood: " + String(new_script.wood)
+	text = "Puuta: " + String(new_script.wood)

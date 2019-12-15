@@ -14,4 +14,4 @@ func _process(delta):
 		_hitTimer += delta
 		if _hitTimer > _maxHitTimer:
 			_hitTimer = 0
-			BuildingList.bonfire.hitpoints -= 20
+			BuildingList.bonfire.hitpoints -= 2
