@@ -6,8 +6,8 @@ export (PackedScene) var SotilasMob
 var _mouseOnGUI = false
 var _buildingPath = null
 
-onready var victoryLabel = $Camera2D/VictoryLabel
-onready var bonfireLabel = $Camera2D/BonfireLabel
+onready var victoryLabel = $Camera2D/CanvasLayer/VictoryLabel
+onready var bonfireLabel = $Camera2D/CanvasLayer/BonfireLabel
 
 
 func _ready():
