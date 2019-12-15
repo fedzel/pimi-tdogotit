@@ -6,12 +6,12 @@
 [ext_resource path="res://Scenes/Bonfire.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/NavigationController.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Villager.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Soldier.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Tree.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Tower.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=10]
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Tree.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Tower.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Fontit/new_theme.tres" type="Theme" id=12]
 [ext_resource path="res://Scenes/Mobspawner.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Storage.tscn" type="PackedScene" id=14]
 
@@ -71,85 +71,74 @@ __meta__ = {
 }
 
 [node name="Enemies" type="Node2D" parent="Navigation2D"]
-editor/display_folded = true
 
 [node name="Extinguisher5" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
 position = Vector2( 96.2452, 314.798 )
 
-[node name="Extinguisher4" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
-position = Vector2( 139.554, 380.792 )
-
-[node name="Extinguisher3" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
-position = Vector2( 151.927, 329.234 )
-
-[node name="Extinguisher2" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
-position = Vector2( 51.2991, 422.341 )
-
-[node name="Extinguisher" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
-position = Vector2( 73.56, 358.106 )
-
-[node name="Saboteur" parent="Navigation2D/Enemies" instance=ExtResource( 3 )]
-position = Vector2( 54.0627, 266.338 )
-
-[node name="Soldier" parent="Navigation2D/Enemies" instance=ExtResource( 7 )]
-position = Vector2( 555.699, 516.739 )
-
 [node name="Forests" type="Node2D" parent="Navigation2D"]
 
-[node name="Woods" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 553.245, 83.0368 )
 
-[node name="Woods2" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods2" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 607.453, 115.16 )
 
-[node name="Woods3" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods3" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 610.465, 64.9674 )
 
-[node name="Woods4" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods4" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 777.105, 442.417 )
 
-[node name="Woods5" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods5" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 727.916, 477.552 )
 
-[node name="Woods6" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods6" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 784.132, 488.595 )
 
-[node name="Woods7" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods7" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 743.978, 523.73 )
 
-[node name="Woods8" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods8" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 819.267, 567.899 )
 
-[node name="Woods9" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods9" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 47.3015, 564.888 )
 
-[node name="Woods10" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods10" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 112.552, 564.888 )
 
-[node name="Woods11" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods11" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 80.4287, 529.753 )
 
-[node name="Woods12" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
+[node name="Woods12" parent="Navigation2D/Forests" instance=ExtResource( 7 )]
 position = Vector2( 36.259, 516.703 )
 
 [node name="Buildings" type="Node2D" parent="Navigation2D"]
-editor/display_folded = true
 
-[node name="Tower" parent="Navigation2D/Buildings" instance=ExtResource( 9 )]
+[node name="Tower" parent="Navigation2D/Buildings" instance=ExtResource( 8 )]
 position = Vector2( 281.078, 182.497 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 current = true
-script = ExtResource( 10 )
+script = ExtResource( 9 )
 
-[node name="GUI" parent="Camera2D" instance=ExtResource( 11 )]
+[node name="GUI" parent="Camera2D" instance=ExtResource( 10 )]
 
-[node name="Control" parent="Camera2D" instance=ExtResource( 12 )]
+[node name="Control" parent="Camera2D" instance=ExtResource( 11 )]
 margin_left = 860.0
 margin_top = 578.66
 margin_right = 860.0
 margin_bottom = 578.66
+
+[node name="VictoryLabel" type="Label" parent="Camera2D"]
+visible = false
+margin_left = 303.036
+margin_top = 131.506
+margin_right = 562.036
+margin_bottom = 250.506
+theme = ExtResource( 12 )
+text = "VOITIT"
 
 [node name="Mobspawner" parent="." instance=ExtResource( 13 )]
 position = Vector2( 366.423, 457.104 )

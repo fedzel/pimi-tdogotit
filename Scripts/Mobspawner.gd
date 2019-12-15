@@ -34,7 +34,6 @@ func wavespawns():
 func _on_Timer_timeout():
 	if timer_allowed:
 		if spawnables > 0:
-			print("spawned")
 			MobSpawn.sammuttajamob = MobSpawn.Sammuttaja.instance()
 			get_tree().call_group("WorldBase", "spawnSammuttaja")
 			spawnables -= 1

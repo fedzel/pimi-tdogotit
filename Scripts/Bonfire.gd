@@ -6,12 +6,20 @@ const VICTORY_CONDITION = 500
 const MAX_TASKS = 3
 var tasks = []
 
+onready var sprite = $Sprite
+
 func _ready():
 	BuildingList.bonfire = self
 	_maxHitpoints = 5000
 	hitpoints = 100
 	pass
 
+func _process(delta):
+	print(hitpoints)
+	var scaleMultiplier = 500.0 / hitpoints + 0.2
+	var scale = 0.3 * scaleMultiplier
+	#sprite.transform = sprite.transform.scaled(Vector2(scale, scale))
+	
 
 func _on_Bonfire_input_event(viewport, event, shape_idx):
 	pass
