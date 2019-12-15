@@ -19,6 +19,7 @@ func _input(event):
 func _on_ItemList_item_selected(index):
 	var graphic
 	if get_node("ItemList").is_anything_selected():
+		get_node("AudioStreamPlayer").play()
 		graphic = get_node("ItemList").get_item_icon(index)
 		get_node("GraphicLoader").show()
 	

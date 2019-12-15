@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tower.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Wall.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Castle.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Äänet/click.wav" type="AudioStream" id=5]
 
 [node name="GUI" type="Control"]
 anchor_right = 1.0
@@ -24,6 +25,9 @@ fixed_icon_size = Vector2( 100, 100 )
 [node name="GraphicLoader" type="Sprite" parent="."]
 position = Vector2( 855.053, 1.18428 )
 scale = Vector2( 0.7, 0.7 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 [connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]
 [connection signal="mouse_entered" from="ItemList" to="." method="_on_ItemList_mouse_entered"]
 [connection signal="mouse_exited" from="ItemList" to="." method="_on_ItemList_mouse_exited"]
