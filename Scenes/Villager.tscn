@@ -6,7 +6,7 @@
 
 [node name="Villager" instance=ExtResource( 1 )]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="Sprite" parent="." index="0"]
