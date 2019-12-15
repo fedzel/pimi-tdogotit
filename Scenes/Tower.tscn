@@ -12,7 +12,13 @@ position = Vector2( 6.69914, -7.17017 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
 
-[node name="CutoutPolygon" parent="." index="3"]
-position = Vector2( -1.78814e-007, 43.948 )
+[node name="Light2D" parent="." index="3"]
+texture_scale = 0.5
+
+[node name="CutoutPolygon" parent="." index="4"]
+position = Vector2( -1.78814e-07, 43.948 )
 scale = Vector2( 0.668003, 5.3948 )
 polygon = PoolVector2Array( 5.48093, -9.76269, -5.54123, -9.77924, -12.1873, -8.96827, -12.2632, -7.32321, -6.0605, -6.5714, 6.21782, -6.59005, 12.0936, -7.41651, 12.3177, -8.99851 )
+
+[node name="AudioStreamPlayer2D" parent="." index="5"]
+position = Vector2( 8.55298, 1.42549 )

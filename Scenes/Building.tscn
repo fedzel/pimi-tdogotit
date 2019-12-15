@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Building.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Smoke.png" type="Texture" id=2]
+[ext_resource path="res://Assets/lightmap.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -20,6 +21,7 @@ flag_disable_z = true
 spread = 161.38
 gravity = Vector3( 0, -30, 0 )
 initial_velocity = 11.49
+angular_velocity = 1.41531e-43
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 0.2
@@ -43,8 +45,13 @@ fixed_fps = 60
 process_material = SubResource( 4 )
 texture = ExtResource( 2 )
 
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -1.78814e-07, 4.17233e-07 )
+scale = Vector2( 0.889312, 0.852416 )
+texture = ExtResource( 3 )
+
 [node name="CutoutPolygon" type="Polygon2D" parent="."]
-position = Vector2( -1.78814e-007, 4.17233e-007 )
+position = Vector2( -1.78814e-07, 4.17233e-07 )
 scale = Vector2( 0.889312, 0.852416 )
 color = Color( 1, 1, 1, 0 )
 polygon = PoolVector2Array( 10, -10, -10, -10, -10, 10, 10, 10 )

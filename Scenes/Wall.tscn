@@ -10,3 +10,6 @@ script = ExtResource( 2 )
 [node name="Sprite" parent="." index="1"]
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
+
+[node name="Light2D" parent="." index="3"]
+texture_scale = 0.8

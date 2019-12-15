@@ -14,3 +14,6 @@ texture = ExtResource( 3 )
 
 [node name="SmokeParticle" parent="." index="2"]
 visible = false
+
+[node name="Light2D" parent="." index="3"]
+texture_scale = 0.8
