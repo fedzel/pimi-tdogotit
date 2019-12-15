@@ -72,24 +72,6 @@ __meta__ = {
 [node name="Enemies" type="Node2D" parent="Navigation2D"]
 editor/display_folded = true
 
-[node name="Extinguisher5" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
-position = Vector2( 96.2452, 314.798 )
-
-[node name="Extinguisher4" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
-position = Vector2( 139.554, 380.792 )
-
-[node name="Extinguisher3" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
-position = Vector2( 151.927, 329.234 )
-
-[node name="Extinguisher2" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
-position = Vector2( 51.2991, 422.341 )
-
-[node name="Extinguisher" parent="Navigation2D/Enemies" instance=ExtResource( 2 )]
-position = Vector2( 73.56, 358.106 )
-
-[node name="Saboteur" parent="Navigation2D/Enemies" instance=ExtResource( 3 )]
-position = Vector2( 54.0627, 266.338 )
-
 [node name="Soldier" parent="Navigation2D/Enemies" instance=ExtResource( 7 )]
 position = Vector2( 555.699, 516.739 )
 
