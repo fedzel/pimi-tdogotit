@@ -14,7 +14,7 @@ script = ExtResource( 1 )
 margin_left = 853.0
 margin_right = 1024.0
 margin_bottom = 601.0
-items = [ "Torni", ExtResource( 2 ), false, "Muuri", ExtResource( 2 ), false, "Linna", ExtResource( 2 ), false ]
+items = [ "Torni (200)", ExtResource( 2 ), false, "Muuri (100)", ExtResource( 2 ), false, "Linna (500)", ExtResource( 2 ), false ]
 max_columns = 2
 same_column_width = true
 
