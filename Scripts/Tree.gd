@@ -12,9 +12,6 @@ var woodStored = 500
 var tasks = []
 
 
-func _ready():
-	pass
-
 func _process(delta):
 	if _cutoutDone == false:
 		_cutoutDone = true

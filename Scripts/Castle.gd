@@ -1,8 +1,8 @@
 extends "res://Scripts/Building.gd"
-class_name Tower
+class_name Castle
 
 var _cooldown = 0
-const _maxCooldown = 2
+const _maxCooldown = 0.5
 
 var _cutoutDone = false
 
@@ -35,6 +35,7 @@ func _process(delta):
 var cutoutId;
 
 func cutout():
+	#cutoutPolygon.offset = position
 	cutoutId = get_parent().get_parent().cutout(cutoutPolygon, position)
 	
 func reinsert():

@@ -1,9 +1,9 @@
 extends Control
 
 const TOWER_PATH = "res://Scenes/Tower.tscn"
-const WALL_PATH = "" 
-const SMITH_PATH = ""
-const CASTLE_PATH = ""
+const WALL_PATH = "res://Scenes/Wall.tscn" 
+#const SMITH_PATH = ""
+const CASTLE_PATH = "res://Scenes/Castle.tscn"
 
 
 func _process(delta):
@@ -33,8 +33,6 @@ func buildingPathFromIndex(index: int):
 	elif index == 1:
 		return WALL_PATH
 	elif index == 2:
-		return SMITH_PATH
-	elif index == 3:
 		return CASTLE_PATH
 
 func _on_ItemList_item_activated(index):

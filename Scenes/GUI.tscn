@@ -6,13 +6,15 @@
 [node name="GUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.18433
+margin_right = 1.18433
 script = ExtResource( 1 )
 
 [node name="ItemList" type="ItemList" parent="."]
 margin_left = 853.0
 margin_right = 1024.0
 margin_bottom = 601.0
-items = [ "Torni", ExtResource( 2 ), false, "Muuri", ExtResource( 2 ), false, "Seppä", ExtResource( 2 ), false, "Linna", ExtResource( 2 ), false ]
+items = [ "Torni (200)", ExtResource( 2 ), false, "Muuri (100)", ExtResource( 2 ), false, "Linna (500)", ExtResource( 2 ), false ]
 max_columns = 2
 same_column_width = true
 
