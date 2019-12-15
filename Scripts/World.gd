@@ -60,3 +60,8 @@ func spawnSammuttaja():
 
 func spawnSaboteur():
 	get_node("Navigation2D/Enemies").add_child(MobSpawn.saboteurmob)
+
+func _on_Timer_timeout():
+	MobSpawn.waves += 1
+	if MobSpawn.waves == 11:
+		get_node("Camera2D/CanvasLayer/VictoryLabel").show()
