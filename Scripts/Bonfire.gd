@@ -18,7 +18,6 @@ func _on_Bonfire_input_event(viewport, event, shape_idx):
 
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	print("piip")
 	if event is InputEventMouseButton:
 		var mouseEvent = event as InputEventMouseButton
 		if mouseEvent.is_pressed() && mouseEvent.button_index == BUTTON_LEFT && tasks.size() < MAX_TASKS:

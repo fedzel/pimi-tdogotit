@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Building.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Smoke.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -43,7 +43,7 @@ process_material = SubResource( 4 )
 texture = ExtResource( 2 )
 
 [node name="CutoutPolygon" type="Polygon2D" parent="."]
-position = Vector2( -1.78814e-007, 4.17233e-007 )
+position = Vector2( -1.78814e-07, 4.17233e-07 )
 scale = Vector2( 0.889312, 0.852416 )
 color = Color( 1, 1, 1, 0 )
 polygon = PoolVector2Array( 10, -10, -10, -10, -10, 10, 10, 10 )

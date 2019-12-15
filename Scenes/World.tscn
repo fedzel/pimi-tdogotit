@@ -146,6 +146,10 @@ script = ExtResource( 10 )
 [node name="GUI" parent="Camera2D" instance=ExtResource( 11 )]
 
 [node name="Control" parent="Camera2D" instance=ExtResource( 12 )]
+margin_left = 860.0
+margin_top = 578.66
+margin_right = 860.0
+margin_bottom = 578.66
 
 [node name="Mobspawner" parent="." instance=ExtResource( 13 )]
 position = Vector2( 366.423, 457.104 )
