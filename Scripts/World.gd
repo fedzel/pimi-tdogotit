@@ -12,6 +12,7 @@ onready var bonfireLabel = $Camera2D/CanvasLayer/BonfireLabel
 
 func _ready():
 	MobSpawn.Sammuttaja = SammuttajaMob
+	MobSpawn.Saboteur = SaboteurMob
 
 func _process(delta):
 	if BuildingList.bonfire.hitpoints >= BuildingList.bonfire.VICTORY_CONDITION:
@@ -56,3 +57,6 @@ func buildingSelected(path: String):
 
 func spawnSammuttaja():
 	get_node("Navigation2D/Enemies").add_child(MobSpawn.sammuttajamob)
+
+func spawnSaboteur():
+	get_node("Navigation2D/Enemies").add_child(MobSpawn.saboteurmob)
