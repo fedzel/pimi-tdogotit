@@ -4,11 +4,13 @@ class_name Woods
 const MAX_TASKS = 3
 
 var _cutoutDone = false
+var _cutoutId;
 onready var _cutoutPolygon = $Polygon2D
 
 var woodStored = 500
 
 var tasks = []
+
 
 func _ready():
 	pass
@@ -16,9 +18,9 @@ func _ready():
 func _process(delta):
 	if _cutoutDone == false:
 		_cutoutDone = true
-		get_parent().get_parent().cutout(_cutoutPolygon, position)
+		_cutoutId = get_parent().get_parent().cutout(_cutoutPolygon, position)
 	if woodStored <= 0:
-		get_parent().get_parent().reinsert(_cutoutPolygon, position)
+		get_parent().get_parent().reinsert(_cutoutId)
 		for task in tasks:
 			task.cancel()
 		queue_free()

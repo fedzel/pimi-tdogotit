@@ -10,6 +10,9 @@ onready var cutoutPolygon = $CutoutPolygon
 
 func _ready():
 	BuildingList.towers.append(self)
+	
+func _exit_tree():
+	reinsert()
 
 func _process(delta):
 	if _cutoutDone == false:
@@ -29,6 +32,11 @@ func _process(delta):
 				_cooldown = 0
 			continue
 
+var cutoutId;
+
 func cutout():
 	#cutoutPolygon.offset = position
-	get_parent().get_parent().cutout(cutoutPolygon, position)
+	cutoutId = get_parent().get_parent().cutout(cutoutPolygon, position)
+	
+func reinsert():
+	get_parent().get_parent().reinsert(cutoutId)

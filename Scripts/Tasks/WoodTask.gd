@@ -4,7 +4,7 @@ class_name WoodTask
 var storage: Storage
 var woods
 
-const WOOD_CAPACITY = 50
+const WOOD_CAPACITY = 500
 
 var _goingToTree = true
 var _workTime = 0

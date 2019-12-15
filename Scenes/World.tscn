@@ -94,7 +94,6 @@ position = Vector2( 54.0627, 266.338 )
 position = Vector2( 555.699, 516.739 )
 
 [node name="Forests" type="Node2D" parent="Navigation2D"]
-editor/display_folded = true
 
 [node name="Woods" parent="Navigation2D/Forests" instance=ExtResource( 8 )]
 position = Vector2( 553.245, 83.0368 )
