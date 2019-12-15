@@ -1,7 +1,7 @@
 extends Control
 
 const TOWER_PATH = "res://Scenes/Tower.tscn"
-const WALL_PATH = "" 
+const WALL_PATH = "res://Scenes/Wall.tscn" 
 const SMITH_PATH = ""
 const CASTLE_PATH = ""
 

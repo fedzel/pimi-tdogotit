@@ -1,17 +1,11 @@
 extends "res://Scripts/Building.gd"
-class_name Tower
 
-var _cooldown = 0
-const _maxCooldown = 2
-
-var cutoutId;
 var _cutoutDone = false
 
 onready var cutoutPolygon = $CutoutPolygon
 
 func _ready():
 	BuildingList.towers.append(self)
-	BuildingList.walls.append(self)
 	
 func _exit_tree():
 	reinsert()
@@ -21,6 +15,7 @@ func _process(delta):
 		cutout()
 		_cutoutDone = true
 
+var cutoutId;
 
 func cutout():
 	#cutoutPolygon.offset = position
