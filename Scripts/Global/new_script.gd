@@ -1,4 +1,4 @@
 extends Node
 
 
-var wood = 100
+var wood = 1000
