@@ -6,9 +6,18 @@ export (PackedScene) var SotilasMob
 var _mouseOnGUI = false
 var _buildingPath = null
 
+onready var victoryLabel = $Camera2D/VictoryLabel
+onready var bonfireLabel = $Camera2D/BonfireLabel
+
 
 func _ready():
 	MobSpawn.Sammuttaja = SammuttajaMob
+
+func _process(delta):
+	if BuildingList.bonfire.hitpoints >= BuildingList.bonfire.VICTORY_CONDITION:
+		victoryLabel.visible = true
+	bonfireLabel.text = "Kokko: " + String(BuildingList.bonfire.hitpoints)
+	
 
 func _input(event):
 	if event.is_action_pressed("left_click") && _mouseOnGUI == false && _buildingPath != null:
