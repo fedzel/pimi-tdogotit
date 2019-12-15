@@ -22,27 +22,22 @@ func start(mob: Mob):
 func perform(mob: Mob, delta: float):
 	if _goingToStorage:
 		if self.isAtLocation(mob, storage.position):
-			print("at storage")
 			_workTime += delta
 			if _workTime > _maxPickupTime:
 				_workTime = 0
 				_goingToStorage = false
 				mob.setTarget(bonfire.position)
-				print("target = bonfire")
 				new_script.wood -= WOOD_CAPACITY
 	else:
 		if self.isAtLocation(mob, self.bonfire.position):
-			print("at bonfire")
 			_workTime += delta
 			if _workTime > _maxUnloadTime:
-				print("unloaded")
 				_workTime = 0
 				_goingToStorage = true
 				bonfire.hitpoints += WOOD_CAPACITY
 				if _finishAfterDelivery:
 					finished = true
 				else:
-					print("target = storage")
 					mob.setTarget(self.storage.position)
 				
 
