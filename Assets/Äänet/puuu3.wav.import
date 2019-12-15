@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/puuu3.wav-fe2818136f18571b073a0cb72f75faf8.sample"
+
+[deps]
+
+source_file="res://Assets/Äänet/puuu3.wav"
+dest_files=[ "res://.import/puuu3.wav-fe2818136f18571b073a0cb72f75faf8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

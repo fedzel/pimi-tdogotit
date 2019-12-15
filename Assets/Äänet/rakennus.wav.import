@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rakennus.wav-e21f204f83d15a82736169b3f6a8ceb5.sample"
+
+[deps]
+
+source_file="res://Assets/Äänet/rakennus.wav"
+dest_files=[ "res://.import/rakennus.wav-e21f204f83d15a82736169b3f6a8ceb5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
