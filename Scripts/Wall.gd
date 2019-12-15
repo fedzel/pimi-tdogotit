@@ -1,4 +1,6 @@
 extends "res://Scripts/Building.gd"
+class_name Wall
+
 
 var _cutoutDone = false
 
@@ -18,7 +20,6 @@ func _process(delta):
 var cutoutId;
 
 func cutout():
-	#cutoutPolygon.offset = position
 	cutoutId = get_parent().get_parent().cutout(cutoutPolygon, position)
 	
 func reinsert():

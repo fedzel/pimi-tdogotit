@@ -30,6 +30,11 @@ _global_script_classes=[ {
 "path": "res://Scripts/Building.gd"
 }, {
 "base": "KinematicBody2D",
+"class": "Castle",
+"language": "GDScript",
+"path": "res://Scripts/Castle.gd"
+}, {
+"base": "KinematicBody2D",
 "class": "ConstructionSite",
 "language": "GDScript",
 "path": "res://Scripts/ConstructionSite.gd"
@@ -69,6 +74,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Villager.gd"
 }, {
+"base": "KinematicBody2D",
+"class": "Wall",
+"language": "GDScript",
+"path": "res://Scripts/Wall.gd"
+}, {
 "base": "Node",
 "class": "WoodTask",
 "language": "GDScript",
@@ -84,6 +94,7 @@ _global_script_class_icons={
 "BonfireTask": "",
 "BuildTask": "",
 "Building": "",
+"Castle": "",
 "ConstructionSite": "",
 "Mob": "",
 "SaboteurEnemy": "",
@@ -92,6 +103,7 @@ _global_script_class_icons={
 "Task": "",
 "Tower": "",
 "Villager": "",
+"Wall": "",
 "WoodTask": "",
 "Woods": ""
 }
